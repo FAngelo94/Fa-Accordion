@@ -1,6 +1,6 @@
 {
   "name": "fa-accordion",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -29,5 +29,21 @@
       "type": "dist"
     }
   ],
-  "author": "Angelo Falci"
+  "author": "Angelo Falci",
+  "dependencies": {
+    "typescript": "^3.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAngelo94/fa-accordion.git"
+  },
+  "keywords": [
+    "accordion",
+    "pure",
+    "css"
+  ],
+  "bugs": {
+    "url": "https://github.com/FAngelo94/fa-accordion/issues"
+  },
+  "homepage": "https://github.com/FAngelo94/fa-accordion#readme"
 }
