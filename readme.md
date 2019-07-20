@@ -3,7 +3,9 @@
 # fa-accordion
 
 Very light and customizable accordion that work without JS but only CSS.
+
 In this way it is very performing.
+
 You can customize the element using the [CSS-Variables](https://stenciljs.com/docs/styling)
 
 ## Using this component
