@@ -1,0 +1,79 @@
+:host {
+  --fa-accordion-border-radius: 8px;
+  --fa-accordion-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  --fa-label-color: white;
+
+  --fa-accordion-label-justify-content: space-between;
+  --fa-accordion-label-flex-direction: row;
+  --fa-accordion-label-padding: 1em;
+  --fa-accordion-label-background: rgb(86, 125, 233);
+  --fa-accordion-label-cursor: pointer;
+  --fa-accordion-label-font-weight: bold;
+  --fa-accordion-label-font-size: 20px;
+  --fa-accordion-label-color: white;
+
+  --fa-accordion-label-background-hover: blue;
+
+  --fa-accordion-content-background: white;
+  --fa-accordion-content-padding: 1em;
+
+  --fa-accordion-after-content: "\276F";
+  --fa-accordion-after-height:1em;
+  --fa-accordion-after-width:1em;
+  --fa-accordion-after-text-align:center;
+  --fa-accordion-after-font-size: 20px;
+  --fa-accordion-after-color: white;
+  --fa-accordion-after-transition: all 0.35s;
+  --fa-accordion-after-transform: rotate(-90deg);
+
+  --fa-accordion-after-transform-checked: rotate(90deg);
+}
+
+.fa-accordion {
+  overflow: hidden;
+  border-radius: var(--fa-accordion-br);
+  box-shadow: var(--fa-accordion-box-shadow);
+}
+.fa-accordion .accordion-checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.fa-accordion .accordion-label {
+  display: flex;
+  justify-content: var(--fa-accordion-label-justify-content);
+  flex-direction: var(--fa-accordion-label-flex-direction);
+  padding: var(--fa-accordion-label-padding);
+  background: var(--fa-accordion-label-background);
+  cursor: var(--fa-accordion-label-cursor);
+  font-weight: var(--fa-accordion-label-font-weight);
+  font-size: var(--fa-accordion-label-font-size);
+  color: var(--fa-accordion-label-color);
+}
+.fa-accordion .accordion-content {
+  transition: all 0.35s;
+  max-height: 0;
+  background: var(--fa-accordion-content-background);
+  padding: 0 var(--fa-accordion-content-padding)
+}
+.fa-accordion .accordion-label:hover {
+  background: var(--fa-accordion-label-background-hover);
+}
+.fa-accordion .accordion-label::after {
+  content: var(--fa-accordion-after-content);
+  transform: var(--fa-accordion-after-transform);
+  width: var(--fa-accordion-after-width);
+  height: var(--fa-accordion-after-height);
+  text-align: var(--fa-accordion-after-text-align);
+  transition: var(--fa-accordion-after-transition);
+  font-size: var(--fa-accordion-after-font-size);
+  color: var(--fa-accordion-after-color);
+}
+
+.fa-accordion input:checked + .accordion-label::after {
+  transform: var(--fa-accordion-after-transform-checked);
+}
+.fa-accordion input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: var(--fa-accordion-content-padding);
+}
